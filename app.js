@@ -13,12 +13,31 @@ const business = {
   hours: "Lun a Sab, 9:00 a.m. - 8:00 p.m.",
   promo: "Corte + barba por $38.000 de lunes a jueves.",
   services: [
-    { name: "Corte clasico", price: "$25.000" },
-    { name: "Corte + barba", price: "$38.000" },
-    { name: "Barba", price: "$18.000" },
-    { name: "Cejas", price: "$8.000" }
+    { name: "Corte clasico", price: "$25.000", duration: "35 min" },
+    { name: "Corte + barba", price: "$38.000", duration: "55 min" },
+    { name: "Barba", price: "$18.000", duration: "25 min" },
+    { name: "Cejas", price: "$8.000", duration: "10 min" }
   ],
   times: ["10:00 a.m.", "12:30 p.m.", "3:00 p.m.", "6:00 p.m."]
+};
+
+const assistantProfile = {
+  name: "NEXA Barber IA",
+  version: "1.0",
+  role: "Asistente virtual para barberias y negocios con citas",
+  promise: "Responde preguntas frecuentes, recomienda servicios, agenda citas y deja un resumen para seguimiento.",
+  goals: [
+    "Responder precios, horarios, ubicacion y promociones",
+    "Guiar al cliente hacia una cita",
+    "Capturar nombre y WhatsApp",
+    "Pasar a una persona cuando el cliente lo pida"
+  ],
+  rules: [
+    "No inventar precios, horarios ni direcciones",
+    "Responder corto, claro y profesional",
+    "Cerrar cada conversacion con una accion concreta",
+    "Si no sabe algo, ofrecer pasar con una persona"
+  ]
 };
 
 const state = {
@@ -50,6 +69,10 @@ const elements = {
   shareMessageOutput: document.querySelector("#shareMessageOutput"),
   copyDemoLinkButton: document.querySelector("#copyDemoLinkButton"),
   copyShareMessageButton: document.querySelector("#copyShareMessageButton"),
+  assistantPromptOutput: document.querySelector("#assistantPromptOutput"),
+  assistantConfigOutput: document.querySelector("#assistantConfigOutput"),
+  copyAssistantPromptButton: document.querySelector("#copyAssistantPromptButton"),
+  copyAssistantConfigButton: document.querySelector("#copyAssistantConfigButton"),
   headerWhatsappLink: document.querySelector("#headerWhatsappLink"),
   heroWhatsappLink: document.querySelector("#heroWhatsappLink"),
   contactWhatsappLink: document.querySelector("#contactWhatsappLink"),
@@ -160,9 +183,14 @@ function setQuickActions(actions) {
   });
 }
 
+function serviceLine(service) {
+  const duration = service.duration ? ` (${service.duration})` : "";
+  return `- ${service.name}: ${service.price}${duration}`;
+}
+
 function pricesMessage() {
-  const list = business.services.map((service) => `- ${service.name}: ${service.price}`).join("\n");
-  return `Estos son nuestros servicios:\n${list}\n\nQuieres que te ayude a agendar una cita?`;
+  const list = business.services.map(serviceLine).join("\n");
+  return `Claro. Estos son nuestros servicios:\n${list}\n\nSi quieres, puedo ayudarte a reservar una cita ahora.`;
 }
 
 function locationMessage() {
@@ -175,6 +203,27 @@ function hoursMessage() {
 
 function humanMessage() {
   return `Claro. Te puedo pasar con una persona del equipo.\n\nWhatsApp directo: ${business.phone}`;
+}
+
+function promoMessage() {
+  return `${business.promo}\n\nQuieres que te ayude a reservar un espacio?`;
+}
+
+function recommendationMessage() {
+  return "Si quieres verte mas completo, te recomiendo Corte + barba. Si buscas algo rapido, Corte clasico funciona muy bien.\n\nQuieres que te ayude a agendar?";
+}
+
+function paymentMessage() {
+  return "Puedes confirmar el metodo de pago directamente con el equipo. Normalmente muchos negocios reciben efectivo, transferencia o pago digital.\n\nQuieres que te pase con una persona para confirmarlo?";
+}
+
+function durationMessage() {
+  const list = business.services.map(serviceLine).join("\n");
+  return `Duracion aproximada por servicio:\n${list}\n\nTe ayudo a reservar el horario que mejor te quede?`;
+}
+
+function greetingMessage() {
+  return `Hola. Soy ${assistantProfile.name}, el asistente de ${business.name}.\n\nPuedo ayudarte con precios, horarios, ubicacion, promociones o agendar una cita. Que necesitas?`;
 }
 
 function startBooking() {
@@ -193,16 +242,35 @@ function startBooking() {
 
 function findService(text) {
   const normalized = normalizeText(text);
-  return business.services.find((service) => normalizeText(service.name) === normalized);
+  return business.services.find((service) => {
+    const serviceName = normalizeText(service.name);
+    return serviceName === normalized || normalized.includes(serviceName) || serviceName.includes(normalized);
+  });
+}
+
+function serviceOptionsText() {
+  return business.services.map((service) => service.name).join(", ");
+}
+
+function looksLikePhone(text) {
+  return text.replace(/\D/g, "").length >= 7;
 }
 
 function processBooking(text) {
   const booking = state.booking;
+  const normalized = normalizeText(text);
+
+  if (normalized.includes("cancel")) {
+    state.booking = null;
+    setQuickActions(defaultQuickActions());
+    botReply("Listo, cancele la reserva. Puedo ayudarte con precios, horarios, ubicacion o hablar con una persona.");
+    return;
+  }
 
   if (booking.step === "service") {
     const service = findService(text);
     if (!service) {
-      botReply("Te puedo ayudar con corte clasico, corte + barba, barba o cejas. Cual eliges?");
+      botReply(`Te puedo ayudar con: ${serviceOptionsText()}.\n\nCual eliges?`);
       return;
     }
 
@@ -237,6 +305,11 @@ function processBooking(text) {
   }
 
   if (booking.step === "phone") {
+    if (!looksLikePhone(text)) {
+      botReply("Me puedes enviar un numero de WhatsApp valido para confirmar la cita?");
+      return;
+    }
+
     booking.phone = text;
     finishBooking();
   }
@@ -262,7 +335,7 @@ function finishBooking() {
   );
 
   state.booking = null;
-  setQuickActions(["Precios", "Horarios", "Ubicacion", "Agendar cita"]);
+  setQuickActions(defaultQuickActions());
 }
 
 function handleBotIntent(text) {
@@ -270,6 +343,16 @@ function handleBotIntent(text) {
 
   if (state.booking) {
     processBooking(text);
+    return;
+  }
+
+  if (normalized === "hola" || normalized.includes("buenas") || normalized.includes("saludos")) {
+    botReply(greetingMessage());
+    return;
+  }
+
+  if (normalized.includes("duracion") || normalized.includes("demora") || normalized.includes("tiempo") || normalized.includes("tarda")) {
+    botReply(durationMessage());
     return;
   }
 
@@ -289,7 +372,17 @@ function handleBotIntent(text) {
   }
 
   if (normalized.includes("promo") || normalized.includes("oferta")) {
-    botReply(business.promo);
+    botReply(promoMessage());
+    return;
+  }
+
+  if (normalized.includes("recomienda") || normalized.includes("recomiendas") || normalized.includes("mejor") || normalized.includes("look")) {
+    botReply(recommendationMessage());
+    return;
+  }
+
+  if (normalized.includes("pago") || normalized.includes("tarjeta") || normalized.includes("efectivo") || normalized.includes("transferencia")) {
+    botReply(paymentMessage());
     return;
   }
 
@@ -304,7 +397,7 @@ function handleBotIntent(text) {
   }
 
   botReply(
-    "Puedo ayudarte con precios, horarios, ubicacion o agendar una cita. Escribe lo que necesitas o toca una opcion."
+    "Puedo ayudarte con precios, horarios, ubicacion, promociones, recomendaciones o agendar una cita. Escribe lo que necesitas o toca una opcion."
   );
 }
 
@@ -340,6 +433,7 @@ function syncBusinessToUi() {
   }
 
   updateShareTools();
+  updateAssistantAssets();
   updateContactLinks();
 }
 
@@ -368,7 +462,7 @@ function buildDemoLink() {
 }
 
 function buildShareMessage() {
-  return `Hola, te prepare una demo rapida para ${business.name}. Puedes probar como responderia precios, horarios, ubicacion y citas por WhatsApp:\n\n${buildDemoLink()}`;
+  return `Hola, te prepare una demo rapida para ${business.name}. Puedes probar como responderia ${assistantProfile.name} a precios, horarios, ubicacion y citas por WhatsApp:\n\n${buildDemoLink()}`;
 }
 
 function updateShareTools() {
@@ -379,6 +473,89 @@ function updateShareTools() {
   if (elements.shareMessageOutput) {
     elements.shareMessageOutput.value = buildShareMessage();
   }
+}
+
+function buildAssistantPrompt() {
+  const services = business.services.map(serviceLine).join("\n");
+  return [
+    `Eres ${assistantProfile.name}, el asistente virtual de ${business.name}.`,
+    "",
+    "Objetivo principal:",
+    assistantProfile.promise,
+    "",
+    "Datos del negocio:",
+    `- Nombre: ${business.name}`,
+    `- Ciudad o barrio: ${business.city}`,
+    `- WhatsApp: ${business.phone}`,
+    `- Direccion: ${business.address}`,
+    `- Horario: ${business.hours}`,
+    `- Promocion activa: ${business.promo}`,
+    "",
+    "Servicios:",
+    services,
+    "",
+    "Tono:",
+    "Habla en espanol claro, cercano y profesional. Responde como alguien que atiende bien por WhatsApp. Se breve, pero util.",
+    "",
+    "Reglas:",
+    assistantProfile.rules.map((rule) => `- ${rule}`).join("\n"),
+    "",
+    "Flujo para agendar:",
+    "1. Pregunta que servicio quiere reservar.",
+    "2. Pregunta el dia.",
+    `3. Ofrece estos horarios: ${business.times.join(", ")}.`,
+    "4. Pide el nombre.",
+    "5. Pide el numero de WhatsApp.",
+    "6. Entrega resumen de la cita y aclara que sera confirmada por WhatsApp.",
+    "",
+    "Si el cliente pide una recomendacion:",
+    "Sugiere Corte + barba para un cambio completo y Corte clasico si quiere algo rapido.",
+    "",
+    "Si no sabes algo:",
+    `Di que puedes pasar el caso con una persona del equipo al WhatsApp ${business.phone}.`,
+    "",
+    "Mensaje inicial sugerido:",
+    greetingMessage()
+  ].join("\n");
+}
+
+function buildAssistantConfig() {
+  return JSON.stringify(
+    {
+      assistantName: assistantProfile.name,
+      version: assistantProfile.version,
+      role: assistantProfile.role,
+      business: {
+        name: business.name,
+        city: business.city,
+        phone: business.phone,
+        address: business.address,
+        hours: business.hours,
+        promo: business.promo
+      },
+      services: business.services,
+      times: business.times,
+      goals: assistantProfile.goals,
+      rules: assistantProfile.rules,
+      fallback: "Si no tienes la informacion, ofrece pasar con una persona del equipo."
+    },
+    null,
+    2
+  );
+}
+
+function updateAssistantAssets() {
+  if (elements.assistantPromptOutput) {
+    elements.assistantPromptOutput.value = buildAssistantPrompt();
+  }
+
+  if (elements.assistantConfigOutput) {
+    elements.assistantConfigOutput.value = buildAssistantConfig();
+  }
+}
+
+function defaultQuickActions() {
+  return ["Precios", "Horarios", "Ubicacion", "Promo", "Agendar cita", "Humano"];
 }
 
 function buildWhatsAppUrl(message) {
@@ -408,10 +585,10 @@ function resetDemo(showMessage = true) {
   state.booking = null;
   elements.chatWindow.innerHTML = "";
   resetSummary();
-  setQuickActions(["Precios", "Horarios", "Ubicacion", "Agendar cita"]);
+  setQuickActions(defaultQuickActions());
   addMessage(
     "bot",
-    `Hola, soy el asistente de ${business.name}.\nPuedo ayudarte con precios, horarios, ubicacion o agendar una cita.`
+    greetingMessage()
   );
   if (showMessage) {
     showToast("Demo reiniciada");
@@ -503,6 +680,18 @@ function wireDemo() {
     readBusinessFromForm();
     syncBusinessToUi();
     copyText(buildShareMessage(), "Mensaje copiado");
+  });
+
+  elements.copyAssistantPromptButton.addEventListener("click", () => {
+    readBusinessFromForm();
+    syncBusinessToUi();
+    copyText(buildAssistantPrompt(), "Prompt copiado");
+  });
+
+  elements.copyAssistantConfigButton.addEventListener("click", () => {
+    readBusinessFromForm();
+    syncBusinessToUi();
+    copyText(buildAssistantConfig(), "Configuracion copiada");
   });
 }
 

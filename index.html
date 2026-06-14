@@ -26,6 +26,7 @@
       <nav class="main-nav" aria-label="Principal">
         <a href="#inicio">Inicio</a>
         <a href="#servicios">Servicios</a>
+        <a href="#asistente">Asistente</a>
         <a href="#planes">Planes</a>
         <a href="#casos">Casos</a>
         <a href="#demo">Demo</a>
@@ -130,6 +131,71 @@
             <h3>Agenda o envia el contacto</h3>
             <p>Deja un resumen listo para seguimiento y cierre.</p>
           </article>
+        </div>
+      </section>
+
+      <section class="assistant-product-section" id="asistente">
+        <div class="assistant-product">
+          <div class="assistant-product-copy">
+            <p class="eyebrow">Primer asistente creado</p>
+            <h2>NEXA Barber IA atiende clientes y agenda citas</h2>
+            <p>
+              Un asistente listo para barberias y negocios de citas. Responde preguntas frecuentes,
+              recomienda servicios, captura datos y deja un resumen para cerrar por WhatsApp.
+            </p>
+            <div class="assistant-badges" aria-label="Funciones del asistente">
+              <span>Precios</span>
+              <span>Horarios</span>
+              <span>Ubicacion</span>
+              <span>Promos</span>
+              <span>Citas</span>
+            </div>
+          </div>
+
+          <div class="assistant-console" aria-label="Ficha del asistente">
+            <div class="console-topline">
+              <span class="live-dot"></span>
+              <strong>NEXA Barber IA</strong>
+              <em>v1.0</em>
+            </div>
+            <div class="console-grid">
+              <article>
+                <span>Objetivo</span>
+                <strong>Convertir mensajes en citas</strong>
+              </article>
+              <article>
+                <span>Base</span>
+                <strong>Servicios, precios y horario</strong>
+              </article>
+              <article>
+                <span>Entrega</span>
+                <strong>Resumen listo para seguimiento</strong>
+              </article>
+              <article>
+                <span>Escala</span>
+                <strong>Pasa a humano cuando hace falta</strong>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <div class="assistant-admin-kit admin-only">
+          <div class="section-heading compact-heading">
+            <p class="eyebrow">Kit interno del asistente</p>
+            <h2>Prompt maestro y configuracion listos para copiar</h2>
+          </div>
+          <div class="assistant-assets-grid">
+            <label>
+              Prompt maestro
+              <textarea id="assistantPromptOutput" rows="12" readonly></textarea>
+              <button class="secondary-button" id="copyAssistantPromptButton" type="button">Copiar prompt</button>
+            </label>
+            <label>
+              Configuracion JSON
+              <textarea id="assistantConfigOutput" rows="12" readonly></textarea>
+              <button class="secondary-button" id="copyAssistantConfigButton" type="button">Copiar configuracion</button>
+            </label>
+          </div>
         </div>
       </section>
 

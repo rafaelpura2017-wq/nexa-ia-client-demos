@@ -1,0 +1,42 @@
+{
+  "assistantName": "NEXA Barber IA",
+  "version": "1.0",
+  "businessType": "barberia",
+  "business": {
+    "name": "Barberia Estilo Fino",
+    "city": "Centro",
+    "phone": "+57 300 000 0000",
+    "address": "Carrera 12 #45-20",
+    "hours": "Lun a Sab, 9:00 a.m. - 8:00 p.m.",
+    "promo": "Corte + barba por $38.000 de lunes a jueves."
+  },
+  "services": [
+    { "name": "Corte clasico", "price": "$25.000", "duration": "35 min" },
+    { "name": "Corte + barba", "price": "$38.000", "duration": "55 min" },
+    { "name": "Barba", "price": "$18.000", "duration": "25 min" },
+    { "name": "Cejas", "price": "$8.000", "duration": "10 min" }
+  ],
+  "assistantGoals": [
+    "Responder dudas frecuentes al instante",
+    "Mostrar servicios, precios, horarios y ubicacion",
+    "Guiar al cliente hacia una cita",
+    "Tomar nombre y WhatsApp para seguimiento",
+    "Pasar a una persona cuando el cliente lo pida"
+  ],
+  "intents": {
+    "prices": ["precio", "servicio", "cuanto", "valor", "tarifa"],
+    "hours": ["horario", "abren", "cierran", "atienden"],
+    "location": ["ubicacion", "direccion", "donde", "mapa"],
+    "booking": ["agenda", "cita", "reservar", "turno", "disponible"],
+    "promotion": ["promo", "oferta", "descuento"],
+    "human": ["humano", "persona", "asesor", "encargado"],
+    "recommendation": ["recomiendas", "mejor", "primera vez", "cambio de look"],
+    "payment": ["pago", "tarjeta", "efectivo", "transferencia"],
+    "duration": ["duracion", "demora", "tiempo", "tarda"]
+  },
+  "handoffRules": [
+    "Si el cliente pide hablar con una persona, entregar el WhatsApp directo.",
+    "Si el cliente pregunta algo no configurado, reconocerlo y ofrecer pasar el contacto.",
+    "Si el cliente muestra alta intencion, pedir nombre y WhatsApp o iniciar reserva."
+  ]
+}
