@@ -973,6 +973,99 @@ h3 {
   color: rgba(255, 255, 255, 0.78);
 }
 
+.offer-section {
+  color: #fff;
+  background:
+    radial-gradient(circle at 82% 16%, rgba(20, 184, 110, 0.22), transparent 28%),
+    linear-gradient(135deg, #06100f, #0a211f);
+}
+
+.offer-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.3fr);
+  gap: clamp(26px, 5vw, 64px);
+  align-items: center;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.offer-copy h2 {
+  color: #fff;
+}
+
+.offer-copy p {
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.offer-price-card {
+  margin-top: 26px;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+}
+
+.offer-price-card span {
+  display: block;
+  margin-bottom: 12px;
+  color: #9fe7df;
+  font-size: 0.76rem;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.offer-price-card strong {
+  display: block;
+  margin-bottom: 12px;
+  color: #fff;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1;
+}
+
+.offer-price-card p {
+  margin-bottom: 0;
+}
+
+.deliverables-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.deliverables-grid article {
+  min-height: 210px;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 14px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.22);
+}
+
+.deliverables-grid span {
+  display: inline-flex;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  color: #fff;
+  background: var(--teal);
+  border-radius: 50%;
+  font-weight: 950;
+}
+
+.deliverables-grid h3 {
+  color: var(--ink);
+}
+
+.deliverables-grid p {
+  margin-bottom: 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
 .demo-section {
   background: #fff;
 }
@@ -1177,6 +1270,44 @@ h3 {
   line-height: 1.52;
 }
 
+.sales-ready-panel {
+  margin-top: 34px;
+  padding: 24px;
+  color: var(--text);
+  background: #fff;
+  border: 1px solid #1b3531;
+  border-radius: 16px;
+}
+
+.sales-ready-panel h2 {
+  color: var(--ink);
+}
+
+.sales-copy-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.sales-copy-grid label {
+  display: grid;
+  gap: 10px;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
+.sales-copy-grid textarea {
+  min-height: 290px;
+  padding: 14px;
+  color: var(--text);
+  background: #fbfdfc;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
 .site-footer {
   display: grid;
   justify-items: center;
@@ -1263,7 +1394,8 @@ h3 {
 @media (max-width: 1120px) {
   .hero,
   .web-preview,
-  .assistant-product {
+  .assistant-product,
+  .offer-layout {
     grid-template-columns: 1fr;
   }
 
@@ -1275,7 +1407,8 @@ h3 {
   .flyer-grid,
   .plan-grid,
   .script-grid,
-  .assistant-assets-grid {
+  .assistant-assets-grid,
+  .sales-copy-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -1315,8 +1448,13 @@ h3 {
   .mobile-mockups,
   .script-grid,
   .assistant-assets-grid,
+  .sales-copy-grid,
   .demo-layout,
   .contact-section {
+    grid-template-columns: 1fr;
+  }
+
+  .deliverables-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1405,6 +1543,10 @@ h3 {
   }
 
   .assistant-assets-grid textarea {
+    min-height: 240px;
+  }
+
+  .sales-copy-grid textarea {
     min-height: 240px;
   }
 }

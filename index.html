@@ -28,6 +28,7 @@
         <a href="#servicios">Servicios</a>
         <a href="#asistente">Asistente</a>
         <a href="#planes">Planes</a>
+        <a href="#oferta">Oferta</a>
         <a href="#casos">Casos</a>
         <a href="#demo">Demo</a>
         <a class="admin-only" href="#ventas">Ventas</a>
@@ -315,6 +316,47 @@
         </div>
       </section>
 
+      <section class="offer-section" id="oferta">
+        <div class="offer-layout">
+          <div class="offer-copy">
+            <p class="eyebrow">Oferta lista para vender</p>
+            <h2>Web + Asistente IA listo para recibir clientes</h2>
+            <p>
+              Una primera version profesional para negocios que necesitan verse mejor,
+              responder rapido y convertir mensajes en citas o contactos por WhatsApp.
+            </p>
+            <div class="offer-price-card">
+              <span>Paquete lanzamiento</span>
+              <strong>Desde US$249</strong>
+              <p>Entrega inicial en 3 a 5 dias habiles despues de recibir la informacion del negocio.</p>
+            </div>
+          </div>
+
+          <div class="deliverables-grid">
+            <article>
+              <span>01</span>
+              <h3>Pagina profesional</h3>
+              <p>Servicios, precios, ubicacion, horario, promocion y boton directo a WhatsApp.</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>Asistente demo</h3>
+              <p>Responde preguntas frecuentes y muestra como el negocio podria automatizar su atencion.</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>Kit de venta</h3>
+              <p>Mensajes, flyers y argumentos para que el cliente pueda promocionar mejor.</p>
+            </article>
+            <article>
+              <span>04</span>
+              <h3>Soporte mensual</h3>
+              <p>Promociones, ajustes, contenido y mejoras del asistente desde US$99/mes.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section class="demo-section" id="resumen">
         <div class="section-heading centered">
           <p class="eyebrow">Demo interactiva</p>
@@ -455,6 +497,25 @@
             </p>
             <button class="secondary-button" type="button" data-copy-target="scriptEmail">Copiar</button>
           </article>
+        </div>
+
+        <div class="sales-ready-panel">
+          <div class="section-heading compact-heading">
+            <p class="eyebrow">Cierre comercial</p>
+            <h2>Propuesta y datos del cliente listos para copiar</h2>
+          </div>
+          <div class="sales-copy-grid">
+            <label>
+              Propuesta para cerrar
+              <textarea id="salesProposalOutput" rows="10" readonly></textarea>
+              <button class="secondary-button" id="copySalesProposalButton" type="button">Copiar propuesta</button>
+            </label>
+            <label>
+              Checklist para iniciar
+              <textarea id="onboardingChecklistOutput" rows="10" readonly></textarea>
+              <button class="secondary-button" id="copyOnboardingChecklistButton" type="button">Copiar checklist</button>
+            </label>
+          </div>
         </div>
       </section>
     </main>

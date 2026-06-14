@@ -2,7 +2,8 @@ const introScript =
   "Hola, vi tu negocio en Google Maps. Soy de NEXA IA y estoy preparando demos gratis para negocios que quieren responder mas rapido por WhatsApp y verse mas profesionales en internet. Te puedo mostrar una demo con el nombre de tu negocio?";
 
 const company = {
-  whatsapp: "573000000000"
+  whatsapp: "573000000000",
+  hasRealWhatsapp: false
 };
 
 const business = {
@@ -40,6 +41,34 @@ const assistantProfile = {
   ]
 };
 
+const salesOffer = {
+  packageName: "Web + Asistente IA",
+  launchPrice: "US$249",
+  monthlyPrice: "US$99/mes",
+  deliveryTime: "3 a 5 dias habiles",
+  deposit: "50%",
+  deliverables: [
+    "Pagina web profesional de una sola pagina",
+    "Demo de asistente IA personalizada",
+    "Boton directo a WhatsApp",
+    "Servicios, precios, horarios, ubicacion y promocion",
+    "Mensajes base de venta para WhatsApp",
+    "5 piezas visuales o flyers de promocion"
+  ],
+  onboardingQuestions: [
+    "Nombre exacto del negocio",
+    "Ciudad o barrio",
+    "WhatsApp principal",
+    "Direccion o link de Google Maps",
+    "Horarios de atencion",
+    "Servicios y precios",
+    "Promocion activa",
+    "Fotos del local, trabajos o productos",
+    "Redes sociales",
+    "Nombre de la persona encargada"
+  ]
+};
+
 const state = {
   booking: null,
   lastSummary: "",
@@ -73,6 +102,10 @@ const elements = {
   assistantConfigOutput: document.querySelector("#assistantConfigOutput"),
   copyAssistantPromptButton: document.querySelector("#copyAssistantPromptButton"),
   copyAssistantConfigButton: document.querySelector("#copyAssistantConfigButton"),
+  salesProposalOutput: document.querySelector("#salesProposalOutput"),
+  onboardingChecklistOutput: document.querySelector("#onboardingChecklistOutput"),
+  copySalesProposalButton: document.querySelector("#copySalesProposalButton"),
+  copyOnboardingChecklistButton: document.querySelector("#copyOnboardingChecklistButton"),
   headerWhatsappLink: document.querySelector("#headerWhatsappLink"),
   heroWhatsappLink: document.querySelector("#heroWhatsappLink"),
   contactWhatsappLink: document.querySelector("#contactWhatsappLink"),
@@ -101,12 +134,18 @@ function loadBusinessFromUrl() {
     hours: getParam(params, ["horario", "hours"]),
     promo: getParam(params, ["promo", "promocion"])
   };
+  const sellerWhatsapp = getParam(params, ["vendedor", "seller", "contacto", "nexa"]);
 
   Object.entries(values).forEach(([key, value]) => {
     if (value) {
       business[key] = value;
     }
   });
+
+  if (sellerWhatsapp) {
+    company.whatsapp = sellerWhatsapp.replace(/\D/g, "");
+    company.hasRealWhatsapp = company.whatsapp.length >= 10;
+  }
 
   state.isPersonalizedDemo = Object.values(values).some(Boolean);
 }
@@ -434,6 +473,7 @@ function syncBusinessToUi() {
 
   updateShareTools();
   updateAssistantAssets();
+  updateSalesAssets();
   updateContactLinks();
 }
 
@@ -456,6 +496,9 @@ function buildDemoLink() {
   params.set("direccion", business.address);
   params.set("horario", business.hours);
   params.set("promo", business.promo);
+  if (company.hasRealWhatsapp) {
+    params.set("vendedor", company.whatsapp);
+  }
 
   url.search = params.toString();
   return url.toString();
@@ -554,12 +597,55 @@ function updateAssistantAssets() {
   }
 }
 
+function buildSalesProposal() {
+  return [
+    `Hola, te comparto la propuesta para ${business.name}.`,
+    "",
+    `Paquete: ${salesOffer.packageName}`,
+    `Precio de lanzamiento: ${salesOffer.launchPrice}`,
+    `Entrega inicial: ${salesOffer.deliveryTime} despues de recibir la informacion.`,
+    "",
+    "Incluye:",
+    salesOffer.deliverables.map((item) => `- ${item}`).join("\n"),
+    "",
+    "Forma de trabajo:",
+    `- ${salesOffer.deposit} para iniciar.`,
+    "- El restante al entregar la primera version lista para revisar.",
+    "- Despues puedes agregar soporte mensual para promociones, ajustes y mejoras.",
+    "",
+    `Soporte mensual opcional: desde ${salesOffer.monthlyPrice}.`,
+    "",
+    "La idea no es solo tener una pagina: es tener una herramienta que ayude a responder rapido, mostrar tus servicios y convertir conversaciones en clientes."
+  ].join("\n");
+}
+
+function buildOnboardingChecklist() {
+  return [
+    `Perfecto. Para preparar la primera version de ${business.name}, necesito estos datos:`,
+    "",
+    salesOffer.onboardingQuestions.map((item) => `- ${item}`).join("\n"),
+    "",
+    "Con eso preparo la primera version de la pagina y del asistente para que la puedas revisar."
+  ].join("\n");
+}
+
+function updateSalesAssets() {
+  if (elements.salesProposalOutput) {
+    elements.salesProposalOutput.value = buildSalesProposal();
+  }
+
+  if (elements.onboardingChecklistOutput) {
+    elements.onboardingChecklistOutput.value = buildOnboardingChecklist();
+  }
+}
+
 function defaultQuickActions() {
   return ["Precios", "Horarios", "Ubicacion", "Promo", "Agendar cita", "Humano"];
 }
 
 function buildWhatsAppUrl(message) {
-  return `https://wa.me/${company.whatsapp}?text=${encodeURIComponent(message)}`;
+  const number = company.whatsapp.replace(/\D/g, "");
+  return `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
 }
 
 function updateContactLinks() {
@@ -692,6 +778,18 @@ function wireDemo() {
     readBusinessFromForm();
     syncBusinessToUi();
     copyText(buildAssistantConfig(), "Configuracion copiada");
+  });
+
+  elements.copySalesProposalButton.addEventListener("click", () => {
+    readBusinessFromForm();
+    syncBusinessToUi();
+    copyText(buildSalesProposal(), "Propuesta copiada");
+  });
+
+  elements.copyOnboardingChecklistButton.addEventListener("click", () => {
+    readBusinessFromForm();
+    syncBusinessToUi();
+    copyText(buildOnboardingChecklist(), "Checklist copiado");
   });
 }
 
