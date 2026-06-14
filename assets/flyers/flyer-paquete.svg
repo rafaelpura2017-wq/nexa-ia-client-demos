@@ -1,20 +1,27 @@
 <svg width="1080" height="1350" viewBox="0 0 1080 1350" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">Flyer Paquete Lanzamiento Digital</title>
   <desc id="desc">Promocion de paquete web, chatbot y marketing.</desc>
-  <rect width="1080" height="1350" fill="#07100F"/>
-  <rect x="64" y="64" width="952" height="1222" rx="46" fill="#0C1817" stroke="#1B3531" stroke-width="3"/>
-  <circle cx="126" cy="132" r="36" fill="#0F766E"/>
-  <text x="180" y="146" fill="#F7FAF9" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="900">NEXA IA</text>
-  <rect x="64" y="230" width="350" height="58" rx="14" fill="#D7192D"/>
-  <text x="94" y="270" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="900">PROMO LANZAMIENTO</text>
-  <text x="64" y="410" fill="#F7FAF9" font-family="Inter, Arial, sans-serif" font-size="86" font-weight="900">Web +</text>
-  <text x="64" y="504" fill="#F7FAF9" font-family="Inter, Arial, sans-serif" font-size="86" font-weight="900">Chatbot +</text>
-  <text x="64" y="598" fill="#F7FAF9" font-family="Inter, Arial, sans-serif" font-size="86" font-weight="900">Marketing</text>
-  <rect x="64" y="692" width="952" height="92" rx="22" fill="#12302D"/>
-  <text x="100" y="750" fill="#DDEBE8" font-family="Inter, Arial, sans-serif" font-size="36" font-weight="900">Todo para que tu negocio se vea profesional</text>
-  <text x="64" y="884" fill="#C7D7D3" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="700">Incluye pagina oficial, boton a WhatsApp, demo de chatbot, optimizacion Google y 5 piezas de promocion.</text>
-  <text x="64" y="1050" fill="#F7FAF9" font-family="Inter, Arial, sans-serif" font-size="62" font-weight="900">Desde US$249</text>
-  <text x="64" y="1120" fill="#9FE7DF" font-family="Inter, Arial, sans-serif" font-size="36" font-weight="900">Cupos limitados para primeros clientes</text>
-  <rect x="64" y="1188" width="430" height="74" rx="18" fill="#0F766E"/>
-  <text x="100" y="1238" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="900">Ver demo personalizada</text>
+  <rect width="1080" height="1350" fill="#06100F"/>
+  <rect x="64" y="64" width="952" height="1222" rx="46" fill="#0B1917" stroke="#1F4640" stroke-width="3"/>
+  <circle cx="130" cy="134" r="36" fill="#0F766E"/>
+  <text x="184" y="149" fill="#F7FAF9" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="900">NEXA IA</text>
+  <rect x="78" y="232" width="408" height="62" rx="16" fill="#D7192D"/>
+  <text x="110" y="274" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="950">PROMO LANZAMIENTO</text>
+  <text x="78" y="426" fill="#F7FAF9" font-family="Inter, Arial, sans-serif" font-size="84" font-weight="950">Web +</text>
+  <text x="78" y="520" fill="#F7FAF9" font-family="Inter, Arial, sans-serif" font-size="84" font-weight="950">Chatbot +</text>
+  <text x="78" y="614" fill="#F7FAF9" font-family="Inter, Arial, sans-serif" font-size="84" font-weight="950">Marketing</text>
+  <rect x="78" y="704" width="884" height="88" rx="22" fill="#123A35"/>
+  <text x="116" y="760" fill="#DDEBE8" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="950">Todo para verte profesional desde internet</text>
+  <rect x="78" y="850" width="258" height="118" rx="24" fill="#102B27"/>
+  <rect x="410" y="850" width="258" height="118" rx="24" fill="#102B27"/>
+  <rect x="742" y="850" width="220" height="118" rx="24" fill="#102B27"/>
+  <text x="118" y="902" fill="#9FE7DF" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="900">Pagina</text>
+  <text x="118" y="942" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="900">oficial</text>
+  <text x="450" y="902" fill="#9FE7DF" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="900">Bot IA</text>
+  <text x="450" y="942" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="900">24/7</text>
+  <text x="782" y="902" fill="#9FE7DF" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="900">Promos</text>
+  <text x="782" y="942" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="900">listas</text>
+  <text x="78" y="1070" fill="#C7D7D3" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="750">Incluye pagina, boton WhatsApp,</text>
+  <text x="78" y="1120" fill="#C7D7D3" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="750">demo de chatbot y 5 piezas de venta.</text>
+  <text x="78" y="1224" fill="#F7FAF9" font-family="Inter, Arial, sans-serif" font-size="62" font-weight="950">Desde US$249</text>
 </svg>

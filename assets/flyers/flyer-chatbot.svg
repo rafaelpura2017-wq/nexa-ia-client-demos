@@ -1,22 +1,27 @@
 <svg width="1080" height="1350" viewBox="0 0 1080 1350" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">Flyer Chatbot IA</title>
   <desc id="desc">Promocion de chatbot IA para negocios locales.</desc>
-  <rect width="1080" height="1350" fill="#07100F"/>
-  <circle cx="860" cy="210" r="180" fill="#0F766E" opacity="0.18"/>
-  <circle cx="120" cy="1180" r="220" fill="#D7192D" opacity="0.12"/>
-  <rect x="64" y="64" width="952" height="1222" rx="46" stroke="#183330" stroke-width="3"/>
-  <circle cx="126" cy="132" r="36" fill="#0F766E"/>
-  <text x="180" y="146" fill="#F7FAF9" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="900">NEXA IA</text>
-  <text x="64" y="278" fill="#9FE7DF" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="900">CHATBOT IA PARA NEGOCIOS</text>
-  <text x="64" y="405" fill="#F7FAF9" font-family="Inter, Arial, sans-serif" font-size="96" font-weight="900">Responde</text>
-  <text x="64" y="505" fill="#F7FAF9" font-family="Inter, Arial, sans-serif" font-size="96" font-weight="900">clientes 24/7</text>
-  <rect x="64" y="590" width="640" height="86" rx="18" fill="#D9FDD3"/>
-  <text x="96" y="644" fill="#07100F" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800">Precios, horarios y citas</text>
-  <rect x="220" y="704" width="720" height="92" rx="18" fill="#12302D"/>
-  <text x="252" y="762" fill="#DDEBE8" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800">Tu negocio nunca deja al cliente esperando</text>
-  <text x="64" y="895" fill="#C7D7D3" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="700">Ideal para barberias, clinicas, restaurantes y gimnasios.</text>
-  <text x="64" y="1010" fill="#F7FAF9" font-family="Inter, Arial, sans-serif" font-size="54" font-weight="900">Desde US$99</text>
-  <text x="64" y="1074" fill="#9FE7DF" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="800">+ mantenimiento desde US$29/mes</text>
-  <rect x="64" y="1160" width="500" height="82" rx="18" fill="#0F766E"/>
-  <text x="100" y="1214" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="900">Pide tu demo gratis</text>
+  <rect width="1080" height="1350" fill="#06100F"/>
+  <circle cx="875" cy="198" r="210" fill="#14B86E" opacity="0.12"/>
+  <circle cx="118" cy="1188" r="260" fill="#D7192D" opacity="0.10"/>
+  <path d="M66 1030C270 920 458 1012 622 930C778 852 830 700 1018 698V1286H66V1030Z" fill="#0B201D" opacity="0.62"/>
+  <rect x="64" y="64" width="952" height="1222" rx="46" stroke="#1F4640" stroke-width="3"/>
+  <circle cx="130" cy="134" r="36" fill="#0F766E"/>
+  <text x="184" y="149" fill="#F7FAF9" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="900">NEXA IA</text>
+  <text x="78" y="282" fill="#9FE7DF" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="900">CHATBOT IA PARA NEGOCIOS</text>
+  <text x="78" y="414" fill="#F7FAF9" font-family="Inter, Arial, sans-serif" font-size="94" font-weight="900">Responde</text>
+  <text x="78" y="514" fill="#F7FAF9" font-family="Inter, Arial, sans-serif" font-size="94" font-weight="900">clientes 24/7</text>
+  <rect x="78" y="590" width="610" height="82" rx="18" fill="#D9FDD3"/>
+  <text x="112" y="644" fill="#06100F" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="900">Precios | horarios | citas</text>
+  <rect x="204" y="716" width="716" height="84" rx="20" fill="#123A35"/>
+  <text x="240" y="768" fill="#EAF6F3" font-family="Inter, Arial, sans-serif" font-size="31" font-weight="850">Tu cliente recibe respuesta al instante</text>
+  <rect x="78" y="848" width="432" height="78" rx="20" fill="#F7FAF9"/>
+  <text x="112" y="898" fill="#06100F" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="850">Hola, quiero una cita</text>
+  <rect x="528" y="942" width="406" height="88" rx="20" fill="#D9FDD3"/>
+  <text x="562" y="992" fill="#06100F" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="850">Listo. Tengo cupos hoy.</text>
+  <text x="78" y="1094" fill="#C7D7D3" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="750">Ideal para barberias, clinicas,</text>
+  <text x="78" y="1144" fill="#C7D7D3" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="750">restaurantes y gimnasios.</text>
+  <text x="78" y="1232" fill="#F7FAF9" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="950">Desde US$99</text>
+  <rect x="620" y="1164" width="334" height="78" rx="20" fill="#14B86E"/>
+  <text x="656" y="1215" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="950">Pide tu demo</text>
 </svg>

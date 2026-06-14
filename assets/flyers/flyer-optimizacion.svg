@@ -1,19 +1,28 @@
 <svg width="1080" height="1350" viewBox="0 0 1080 1350" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">Flyer Optimizacion de sitio</title>
   <desc id="desc">Promocion de optimizacion de sitio web.</desc>
-  <rect width="1080" height="1350" fill="#07100F"/>
-  <rect x="64" y="64" width="952" height="1222" rx="46" fill="#0C1817" stroke="#1B3531" stroke-width="3"/>
-  <circle cx="126" cy="132" r="36" fill="#0F766E"/>
-  <text x="180" y="146" fill="#F7FAF9" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="900">NEXA IA</text>
-  <text x="64" y="270" fill="#9FE7DF" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="900">OPTIMIZACION DE SITIO</text>
-  <text x="64" y="392" fill="#F7FAF9" font-family="Inter, Arial, sans-serif" font-size="86" font-weight="900">Tu pagina</text>
-  <text x="64" y="486" fill="#F7FAF9" font-family="Inter, Arial, sans-serif" font-size="86" font-weight="900">no esta</text>
-  <text x="64" y="580" fill="#F7FAF9" font-family="Inter, Arial, sans-serif" font-size="86" font-weight="900">vendiendo?</text>
-  <rect x="64" y="668" width="952" height="108" rx="26" fill="#D7192D"/>
-  <text x="100" y="736" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="900">La hacemos clara, rapida y lista para contactos</text>
-  <text x="64" y="882" fill="#C7D7D3" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="700">Revisamos textos, botones, estructura, velocidad visual y llamado a la accion.</text>
-  <text x="64" y="1030" fill="#F7FAF9" font-family="Inter, Arial, sans-serif" font-size="56" font-weight="900">Auditoria gratis</text>
-  <text x="64" y="1098" fill="#9FE7DF" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="900">Optimizacion desde US$79</text>
-  <rect x="64" y="1174" width="560" height="76" rx="18" fill="#0F766E"/>
-  <text x="100" y="1224" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="900">Envia tu pagina y la revisamos</text>
+  <rect width="1080" height="1350" fill="#06100F"/>
+  <rect x="64" y="64" width="952" height="1222" rx="46" fill="#0B1917" stroke="#1F4640" stroke-width="3"/>
+  <circle cx="130" cy="134" r="36" fill="#0F766E"/>
+  <text x="184" y="149" fill="#F7FAF9" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="900">NEXA IA</text>
+  <text x="78" y="274" fill="#9FE7DF" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="900">OPTIMIZACION DE SITIO</text>
+  <text x="78" y="402" fill="#F7FAF9" font-family="Inter, Arial, sans-serif" font-size="84" font-weight="950">Tu pagina</text>
+  <text x="78" y="496" fill="#F7FAF9" font-family="Inter, Arial, sans-serif" font-size="84" font-weight="950">no esta</text>
+  <text x="78" y="590" fill="#F7FAF9" font-family="Inter, Arial, sans-serif" font-size="84" font-weight="950">vendiendo?</text>
+  <rect x="78" y="662" width="820" height="96" rx="24" fill="#D7192D"/>
+  <text x="116" y="724" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="950">La hacemos clara, rapida y vendible</text>
+  <g fill="#123A35">
+    <rect x="78" y="830" width="210" height="98" rx="22"/>
+    <rect x="314" y="830" width="210" height="98" rx="22"/>
+    <rect x="550" y="830" width="210" height="98" rx="22"/>
+    <rect x="786" y="830" width="192" height="98" rx="22"/>
+  </g>
+  <text x="118" y="891" fill="#DDEBE8" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="900">Textos</text>
+  <text x="350" y="891" fill="#DDEBE8" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="900">Botones</text>
+  <text x="582" y="891" fill="#DDEBE8" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="900">Velocidad</text>
+  <text x="840" y="891" fill="#DDEBE8" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="900">CTA</text>
+  <text x="78" y="1012" fill="#C7D7D3" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="750">Revisamos estructura, mensajes,</text>
+  <text x="78" y="1062" fill="#C7D7D3" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="750">botones y llamado a la accion.</text>
+  <text x="78" y="1160" fill="#F7FAF9" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="950">Auditoria gratis</text>
+  <text x="78" y="1228" fill="#9FE7DF" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="900">Optimizacion desde US$79</text>
 </svg>

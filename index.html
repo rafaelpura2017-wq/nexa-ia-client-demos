@@ -7,13 +7,13 @@
       name="description"
       content="NEXA IA crea paginas web, chatbots, automatizaciones, optimizacion de sitios y marketing digital para negocios locales."
     />
-    <meta property="og:title" content="NEXA IA | Software para negocios" />
+    <meta property="og:title" content="NEXA IA | Convierte mensajes en clientes" />
     <meta
       property="og:description"
       content="Paginas web, chatbots y automatizaciones para que negocios locales atiendan mejor y vendan mas por WhatsApp."
     />
-    <meta name="theme-color" content="#07100F" />
-    <title>NEXA IA | Software para negocios</title>
+    <meta name="theme-color" content="#06100f" />
+    <title>NEXA IA | Convierte mensajes en clientes</title>
     <link rel="icon" href="assets/nexa-ia-mark.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -24,11 +24,11 @@
         <span>NEXA IA</span>
       </a>
       <nav class="main-nav" aria-label="Principal">
-        <a href="#productos">Servicios</a>
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#planes">Planes</a>
+        <a href="#casos">Casos</a>
         <a href="#demo">Demo</a>
-        <a href="#proceso">Proceso</a>
-        <a href="#contacto">Contacto</a>
-        <a class="admin-only" href="#flyers">Flyers</a>
         <a class="admin-only" href="#ventas">Ventas</a>
       </nav>
       <a class="header-action" id="headerWhatsappLink" href="#contacto">Solicitar demo</a>
@@ -36,144 +36,221 @@
 
     <main>
       <section class="hero" id="inicio">
-        <div class="hero-content">
-          <p class="eyebrow">Software para negocios locales</p>
-          <h1>Paginas web, chatbots y sistemas simples que convierten mensajes en clientes.</h1>
+        <div class="hero-copy-block">
+          <p class="eyebrow">Automatizamos conversaciones, impulsamos negocios</p>
+          <h1>Convierte mensajes en clientes <span>automaticamente.</span></h1>
           <p class="hero-copy">
-            Ayudamos a barberias, restaurantes, clinicas, gimnasios y tiendas a verse mas profesionales,
-            responder mas rapido y cerrar mas citas por WhatsApp, Google e Instagram.
+            Asistentes IA, paginas web y sistemas simples para negocios que quieren responder mas rapido,
+            verse profesionales y vender mas por WhatsApp.
           </p>
           <div class="hero-actions">
-            <a class="primary-button" href="#demo">Ver demo</a>
-            <a class="secondary-button" id="heroWhatsappLink" href="#contacto">Hablar por WhatsApp</a>
+            <a class="primary-button" href="#demo">Solicitar demo gratis</a>
+            <a class="secondary-button" href="#servicios">Ver servicios</a>
           </div>
-          <div class="proof-row" aria-label="Beneficios principales">
-            <span>Demo gratis</span>
-            <span>Entrega rapida</span>
-            <span>Planes mensuales</span>
+          <div class="metric-row" aria-label="Beneficios principales">
+            <div><strong>+Clientes</strong><span>Mas ventas</span></div>
+            <div><strong>24/7</strong><span>Siempre disponible</span></div>
+            <div><strong>Automatiza</strong><span>Ahorra tiempo</span></div>
           </div>
         </div>
 
-        <div class="product-preview" aria-label="Vista previa de producto">
-          <div class="preview-topbar">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <div class="preview-grid">
-            <div class="preview-chat">
-              <strong>Asistente IA</strong>
-              <p>Hola, puedo ayudarte con precios, horarios y reservas.</p>
-              <p class="client-bubble">Quiero agendar para hoy</p>
-              <p>Listo. Tengo 3:00 p.m. y 6:00 p.m.</p>
+        <div class="hero-phone-wrap" id="demo" aria-label="Vista previa del asistente">
+          <div class="phone hero-phone">
+            <header class="phone-header">
+              <img src="assets/nexa-ia-mark.svg" alt="" />
+              <div class="phone-title">
+                <strong id="chatBusinessName">Barberia Estilo Fino</strong>
+                <span>Asistente disponible</span>
+              </div>
+              <span class="status-dot" aria-hidden="true"></span>
+            </header>
+            <div class="chat-window" id="chatWindow" aria-live="polite"></div>
+            <div class="quick-actions" id="quickActions">
+              <button type="button" data-message="Precios">Precios</button>
+              <button type="button" data-message="Horarios">Horarios</button>
+              <button type="button" data-message="Ubicacion">Ubicacion</button>
+              <button type="button" data-message="Agendar cita">Agendar cita</button>
             </div>
-            <div class="preview-stack">
-              <div>
-                <span>Pagina oficial</span>
-                <strong>Lista para Google</strong>
-              </div>
-              <div>
-                <span>Marketing</span>
-                <strong>Ofertas para vender</strong>
-              </div>
-              <div>
-                <span>Seguimiento</span>
-                <strong>Clientes organizados</strong>
-              </div>
-            </div>
+            <form class="composer" id="composerForm">
+              <input id="messageInput" type="text" placeholder="Escribe un mensaje..." autocomplete="off" />
+              <button type="submit" aria-label="Enviar mensaje">
+                <span>Enviar</span>
+              </button>
+            </form>
           </div>
         </div>
       </section>
 
-      <section class="section-block" id="productos">
-        <div class="section-heading">
-          <p class="eyebrow">Productos principales</p>
-          <h2>Lo que vamos a vender primero</h2>
+      <section class="solutions-section" id="servicios">
+        <div class="section-heading centered">
+          <p class="eyebrow">Soluciones que impulsan tu negocio</p>
+          <h2>Todo lo que necesitas para atender, vender y dar confianza</h2>
+        </div>
+
+        <div class="solution-grid">
+          <article class="solution-card">
+            <span class="service-icon whatsapp-icon">W</span>
+            <h3>Asistente IA WhatsApp</h3>
+            <p>Responde 24/7, agenda citas, da precios, horarios, ubicacion y resuelve dudas frecuentes.</p>
+            <a href="#demo">Mas informacion</a>
+          </article>
+          <article class="solution-card">
+            <span class="service-icon web-icon">G</span>
+            <h3>Pagina Web Profesional</h3>
+            <p>Diseños modernos, optimizados para Google y pensados para convertir visitantes en clientes.</p>
+            <a href="#planes">Mas informacion</a>
+          </article>
+          <article class="solution-card">
+            <span class="service-icon marketing-icon">M</span>
+            <h3>Marketing Digital</h3>
+            <p>Atraemos mas clientes con promociones, contenido, mensajes de venta y posicionamiento local.</p>
+            <a href="#flyers">Mas informacion</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="assistant-flow">
+        <div class="section-heading centered compact-heading">
+          <p class="eyebrow">Asi funciona nuestro asistente IA</p>
+          <h2>Del primer mensaje a una cita o venta</h2>
+        </div>
+        <div class="flow-grid">
+          <article>
+            <span>1</span>
+            <h3>El cliente escribe por WhatsApp</h3>
+            <p>Pregunta precios, horarios, ubicacion o disponibilidad.</p>
+          </article>
+          <article>
+            <span>2</span>
+            <h3>La IA responde al instante</h3>
+            <p>Usa informacion real del negocio y guia la conversacion.</p>
+          </article>
+          <article>
+            <span>3</span>
+            <h3>Agenda o envia el contacto</h3>
+            <p>Deja un resumen listo para seguimiento y cierre.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="showcase-section" id="flyers">
+        <div class="section-heading centered">
+          <p class="eyebrow">Flyers e imagenes para WhatsApp</p>
+          <h2>Piezas comerciales para abrir conversaciones</h2>
           <p>
-            Estos paquetes son faciles de explicar por WhatsApp y atacan problemas claros: falta de pagina,
-            mensajes sin responder, poca confianza y poco seguimiento.
+            Cada pieza tiene un angulo de venta distinto: perdida de clientes, atencion 24/7,
+            pagina profesional, Google, automatizacion y demo gratis.
           </p>
         </div>
+        <div class="flyer-grid public-flyers">
+          <figure class="flyer-card">
+            <img src="assets/flyers/flyer-chatbot.svg" alt="Flyer de chatbot IA" />
+            <figcaption>Chatbot IA</figcaption>
+          </figure>
+          <figure class="flyer-card">
+            <img src="assets/flyers/flyer-ainaweb.svg" alt="Flyer de pagina web profesional" />
+            <figcaption>AinaWeb</figcaption>
+          </figure>
+          <figure class="flyer-card">
+            <img src="assets/flyers/flyer-optimizacion.svg" alt="Flyer de optimizacion de sitio" />
+            <figcaption>Optimizacion</figcaption>
+          </figure>
+          <figure class="flyer-card">
+            <img src="assets/flyers/flyer-marketing.svg" alt="Flyer de marketing digital" />
+            <figcaption>Marketing</figcaption>
+          </figure>
+          <figure class="flyer-card">
+            <img src="assets/flyers/flyer-paquete.svg" alt="Flyer de paquete lanzamiento" />
+            <figcaption>Paquete lanzamiento</figcaption>
+          </figure>
+          <figure class="flyer-card">
+            <img src="assets/flyers/flyer-demo-gratis.svg" alt="Flyer de demo gratis" />
+            <figcaption>Demo gratis</figcaption>
+          </figure>
+        </div>
+      </section>
 
-        <div class="product-grid">
-          <article class="product-card highlight">
-            <span class="product-tag">Mas facil de vender</span>
-            <h3>Chatbot IA</h3>
-            <p>Responde preguntas frecuentes, precios, horarios, ubicacion y ayuda a separar citas.</p>
-            <ul>
-              <li>Flujo para WhatsApp o web</li>
-              <li>Respuestas por servicio</li>
-              <li>Resumen de clientes interesados</li>
-            </ul>
-            <strong class="price">Desde US$99 + US$29/mes</strong>
+      <section class="web-preview-section">
+        <div class="web-preview">
+          <div>
+            <p class="eyebrow">Vista de chatbot en pagina web</p>
+            <h2>Soluciones inteligentes para negocios que quieren crecer.</h2>
+            <p>
+              Integramos pagina, WhatsApp, respuestas automaticas, promociones y estructura visual
+              para que tu negocio se vea serio desde el primer clic.
+            </p>
+            <a class="primary-button" href="#contacto">Solicitar demo</a>
+          </div>
+          <div class="mini-browser">
+            <div class="mini-browser-bar">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="mini-browser-body">
+              <div>
+                <strong>Asistente NEXA IA</strong>
+                <p>Hola, en que puedo ayudarte?</p>
+                <p class="mini-reply">Quiero mas informacion</p>
+                <p>Claro, te cuento sobre nuestros servicios.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="responsive-section">
+        <div class="section-heading centered compact-heading">
+          <p class="eyebrow">Diseno responsive movil</p>
+          <h2>Se ve bien desde donde te escriben tus clientes</h2>
+        </div>
+        <div class="mobile-mockups">
+          <div class="mobile-screen">
+            <h3>Convierte mensajes</h3>
+            <p>Asistentes IA y paginas web para negocios locales.</p>
+            <a>Solicitar demo</a>
+          </div>
+          <div class="mobile-screen light">
+            <h3>Servicios</h3>
+            <div>Asistente IA WhatsApp</div>
+            <div>Pagina Web Profesional</div>
+          </div>
+          <div class="mobile-screen plan-screen">
+            <h3>Plan popular</h3>
+            <strong>$299.000</strong>
+            <p>Web + chatbot + soporte prioritario.</p>
+            <a>Contratar ahora</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="plans-section" id="planes">
+        <div class="section-heading centered">
+          <p class="eyebrow">Planes claros para empezar</p>
+          <h2>Elige la entrada que mas sentido tenga para tu negocio</h2>
+        </div>
+        <div class="plan-grid">
+          <article class="plan-card">
+            <span>Inicial</span>
+            <h3>Demo + Diagnostico</h3>
+            <strong>Gratis</strong>
+            <p>Revisamos tu negocio y te mostramos como podria funcionar una demo personalizada.</p>
           </article>
-
-          <article class="product-card">
-            <span class="product-tag">Producto base</span>
-            <h3>AinaWeb</h3>
-            <p>Pagina oficial para negocios que hoy solo tienen redes o Google Maps.</p>
-            <ul>
-              <li>Secciones de servicios y precios</li>
-              <li>Boton directo a WhatsApp</li>
-              <li>Diseño adaptable a celular</li>
-            </ul>
-            <strong class="price">Desde US$149</strong>
+          <article class="plan-card featured-plan">
+            <span>Popular</span>
+            <h3>Web + Chatbot</h3>
+            <strong>Desde US$249</strong>
+            <p>Pagina oficial, boton a WhatsApp, demo de asistente, textos base y estructura comercial.</p>
           </article>
-
-          <article class="product-card">
-            <span class="product-tag">Mejora rapida</span>
-            <h3>Optimizacion de sitio</h3>
-            <p>Mejoramos una pagina existente para que cargue mejor, se entienda rapido y consiga contactos.</p>
-            <ul>
-              <li>Revision de textos y llamados</li>
-              <li>Mejora visual y estructura</li>
-              <li>Botones de contacto visibles</li>
-            </ul>
-            <strong class="price">Desde US$79</strong>
-          </article>
-
-          <article class="product-card">
-            <span class="product-tag">Mensualidad</span>
-            <h3>Marketing digital</h3>
-            <p>Ideas, piezas y mensajes para que el negocio tenga algo concreto que publicar y enviar.</p>
-            <ul>
-              <li>Flyers de promociones</li>
-              <li>Mensajes para WhatsApp</li>
-              <li>Campañas simples por temporada</li>
-            </ul>
-            <strong class="price">Desde US$99/mes</strong>
+          <article class="plan-card">
+            <span>Mensual</span>
+            <h3>Marketing + Soporte</h3>
+            <strong>Desde US$99/mes</strong>
+            <p>Promociones, ajustes, flyers, mensajes de venta y mejoras del sistema cada mes.</p>
           </article>
         </div>
       </section>
 
-      <section class="section-block muted-section">
-        <div class="section-heading">
-          <p class="eyebrow">Recomendaciones para vender mas</p>
-          <h2>Servicios extra que podemos sumar despues</h2>
-        </div>
-
-        <div class="recommendation-grid">
-          <article>
-            <h3>Google Business Profile</h3>
-            <p>Optimizar fotos, descripcion, horarios, link de WhatsApp y publicaciones para que el negocio se vea activo.</p>
-          </article>
-          <article>
-            <h3>Sistema de reservas</h3>
-            <p>Agenda simple para separar citas, recibir datos y evitar perder clientes por mensajes olvidados.</p>
-          </article>
-          <article>
-            <h3>CRM simple</h3>
-            <p>Una hoja organizada con clientes, estado de contacto, fecha y proximo seguimiento.</p>
-          </article>
-          <article>
-            <h3>Contenido mensual</h3>
-            <p>Paquete de promociones, historias, anuncios y mensajes para reactivar clientes antiguos.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="demo-section" id="demo">
-        <div class="section-heading">
+      <section class="demo-section" id="resumen">
+        <div class="section-heading centered">
           <p class="eyebrow">Demo interactiva</p>
           <h2 id="demoTitle">Mira como un asistente puede atender a tus clientes</h2>
           <p id="demoLead">
@@ -237,149 +314,45 @@
             </div>
           </section>
 
-          <section class="phone-stage" aria-label="Simulador de chat">
-            <div class="phone">
-              <header class="phone-header">
-                <img src="assets/nexa-ia-mark.svg" alt="" />
-                <div class="phone-title">
-                  <strong id="chatBusinessName">Barberia Estilo Fino</strong>
-                  <span>Asistente disponible</span>
-                </div>
-                <span class="status-dot" aria-hidden="true"></span>
-              </header>
-
-              <div class="chat-window" id="chatWindow" aria-live="polite"></div>
-
-              <div class="quick-actions" id="quickActions">
-                <button type="button" data-message="Precios">Precios</button>
-                <button type="button" data-message="Horarios">Horarios</button>
-                <button type="button" data-message="Ubicacion">Ubicacion</button>
-                <button type="button" data-message="Agendar cita">Agendar cita</button>
-              </div>
-
-              <form class="composer" id="composerForm">
-                <input id="messageInput" type="text" placeholder="Escribe como cliente..." autocomplete="off" />
-                <button type="submit" aria-label="Enviar mensaje">
-                  <span>Enviar</span>
-                </button>
-              </form>
+          <aside class="result-panel" aria-label="Resumen de cita">
+            <h3>Resumen de la cita</h3>
+            <div id="bookingSummary" class="empty-state">
+              Todavia no hay una cita creada en esta demo.
             </div>
-
-            <aside class="result-panel" aria-label="Resumen de cita">
-              <h3>Resumen de la cita</h3>
-              <div id="bookingSummary" class="empty-state">
-                Todavia no hay una cita creada en esta demo.
-              </div>
-              <button class="secondary-button" id="copySummaryButton" type="button">Copiar resumen</button>
-            </aside>
-          </section>
+            <button class="secondary-button" id="copySummaryButton" type="button">Copiar resumen</button>
+          </aside>
         </div>
       </section>
 
-      <section class="section-block process-section" id="proceso">
-        <div class="section-heading">
-          <p class="eyebrow">Como trabajamos</p>
-          <h2>Un proceso simple para empezar rapido</h2>
-          <p>
-            No necesitas cambiar todo tu negocio. Empezamos con lo que mas pierde clientes: mensajes sin responder,
-            falta de pagina oficial o una presencia digital que no genera confianza.
-          </p>
+      <section class="trust-section" id="casos">
+        <div class="section-heading centered compact-heading">
+          <p class="eyebrow">Casos y negocios ideales</p>
+          <h2>Para negocios que quieren verse activos y responder mejor</h2>
         </div>
-
-        <div class="process-grid">
-          <article>
-            <span>01</span>
-            <h3>Revisamos tu negocio</h3>
-            <p>Miramos Google Maps, redes, WhatsApp y la forma en que hoy llegan tus clientes.</p>
-          </article>
-          <article>
-            <span>02</span>
-            <h3>Te mostramos una demo</h3>
-            <p>Preparamos un ejemplo con tu nombre, servicios y una experiencia parecida a la real.</p>
-          </article>
-          <article>
-            <span>03</span>
-            <h3>Configuramos el sistema</h3>
-            <p>Montamos pagina, chatbot, botones, textos y estructura para recibir contactos.</p>
-          </article>
-          <article>
-            <span>04</span>
-            <h3>Mejoramos cada mes</h3>
-            <p>Ajustamos respuestas, promociones y contenido para que el sistema siga vendiendo.</p>
-          </article>
+        <div class="logo-row" aria-label="Negocios ejemplo">
+          <span>Barberias</span>
+          <span>Restaurantes</span>
+          <span>Clinicas</span>
+          <span>Gimnasios</span>
+          <span>Tiendas</span>
         </div>
+        <p class="rating-line">★★★★★ + Clientes satisfechos con respuestas mas rapidas</p>
       </section>
 
       <section class="contact-section" id="contacto">
         <div>
-          <p class="eyebrow">Demo gratis</p>
-          <h2>Quieres ver como quedaria para tu negocio?</h2>
+          <p class="eyebrow">Listo para transformar tu negocio?</p>
+          <h2>Escribenos por WhatsApp y te preparamos una demo.</h2>
           <p>
-            Escríbenos y te preparamos una demo con tu nombre, servicios, horarios y boton directo a WhatsApp.
+            Envia el nombre de tu negocio, ciudad, servicios y horario. Te mostramos una version personalizada.
           </p>
         </div>
         <a class="primary-button" id="contactWhatsappLink" href="#">Solicitar demo por WhatsApp</a>
       </section>
 
-      <section class="section-block admin-only" id="flyers">
-        <div class="section-heading">
-          <p class="eyebrow">Piezas para enviar</p>
-          <h2>Flyers de venta listos para abrir y compartir</h2>
-          <p>
-            Empieza con estos 6. Cada uno tiene un angulo diferente: dolor, oferta, demo gratis,
-            producto concreto o paquete completo.
-          </p>
-        </div>
-
-        <div class="flyer-grid">
-          <figure>
-            <img src="assets/flyers/flyer-chatbot.svg" alt="Flyer Chatbot IA" />
-            <figcaption>
-              Chatbot IA
-              <a href="assets/flyers/flyer-chatbot.svg" download>Descargar</a>
-            </figcaption>
-          </figure>
-          <figure>
-            <img src="assets/flyers/flyer-ainaweb.svg" alt="Flyer AinaWeb" />
-            <figcaption>
-              AinaWeb
-              <a href="assets/flyers/flyer-ainaweb.svg" download>Descargar</a>
-            </figcaption>
-          </figure>
-          <figure>
-            <img src="assets/flyers/flyer-optimizacion.svg" alt="Flyer optimizacion" />
-            <figcaption>
-              Optimizacion
-              <a href="assets/flyers/flyer-optimizacion.svg" download>Descargar</a>
-            </figcaption>
-          </figure>
-          <figure>
-            <img src="assets/flyers/flyer-marketing.svg" alt="Flyer marketing digital" />
-            <figcaption>
-              Marketing digital
-              <a href="assets/flyers/flyer-marketing.svg" download>Descargar</a>
-            </figcaption>
-          </figure>
-          <figure>
-            <img src="assets/flyers/flyer-paquete.svg" alt="Flyer paquete lanzamiento" />
-            <figcaption>
-              Paquete lanzamiento
-              <a href="assets/flyers/flyer-paquete.svg" download>Descargar</a>
-            </figcaption>
-          </figure>
-          <figure>
-            <img src="assets/flyers/flyer-demo-gratis.svg" alt="Flyer demo gratis" />
-            <figcaption>
-              Demo gratis
-              <a href="assets/flyers/flyer-demo-gratis.svg" download>Descargar</a>
-            </figcaption>
-          </figure>
-        </div>
-      </section>
-
       <section class="section-block sales-section admin-only" id="ventas">
         <div class="section-heading">
-          <p class="eyebrow">Kit de ventas</p>
+          <p class="eyebrow">Kit interno de ventas</p>
           <h2>Mensajes para contactar por WhatsApp, llamada o correo</h2>
           <p>
             La entrada mas fuerte es ofrecer una demo personalizada, no vender de una vez.
@@ -395,7 +368,6 @@
             </p>
             <button class="secondary-button" type="button" data-copy-target="scriptWhatsapp">Copiar</button>
           </article>
-
           <article class="script-card">
             <h3>Si no tiene pagina</h3>
             <p id="scriptWeb">
@@ -403,7 +375,6 @@
             </p>
             <button class="secondary-button" type="button" data-copy-target="scriptWeb">Copiar</button>
           </article>
-
           <article class="script-card">
             <h3>Para llamada</h3>
             <p id="scriptCall">
@@ -411,7 +382,6 @@
             </p>
             <button class="secondary-button" type="button" data-copy-target="scriptCall">Copiar</button>
           </article>
-
           <article class="script-card">
             <h3>Correo corto</h3>
             <p id="scriptEmail">
@@ -428,8 +398,14 @@
       <p>Paginas web, chatbots, optimizacion y marketing digital para negocios locales.</p>
     </footer>
 
-    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <div class="sticky-cta">
+      <span>Mas clientes</span>
+      <span>Mas ventas</span>
+      <span>Negocio automatizado 24/7</span>
+      <a id="heroWhatsappLink" href="#">Escribenos por WhatsApp</a>
+    </div>
 
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
     <script src="app.js"></script>
   </body>
 </html>
