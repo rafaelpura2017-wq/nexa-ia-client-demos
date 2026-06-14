@@ -2,6 +2,26 @@
 
 Sitio comercial para vender paginas web, chatbots, optimizacion y marketing digital a negocios locales.
 
+## Links publicados
+
+Repo:
+
+```text
+https://github.com/rafaelpura2017-wq/nexa-ia-client-demos
+```
+
+Pagina publica:
+
+```text
+https://rafaelpura2017-wq.github.io/nexa-ia-client-demos/
+```
+
+Modo admin:
+
+```text
+https://rafaelpura2017-wq.github.io/nexa-ia-client-demos/?admin=1
+```
+
 ## Como usar la pagina
 
 1. Abre la version publica para clientes.
