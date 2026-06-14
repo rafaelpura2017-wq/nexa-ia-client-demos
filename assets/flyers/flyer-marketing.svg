@@ -1,0 +1,22 @@
+<svg width="1080" height="1350" viewBox="0 0 1080 1350" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Flyer Marketing Digital</title>
+  <desc id="desc">Promocion de marketing digital local.</desc>
+  <rect width="1080" height="1350" fill="#F5F7F6"/>
+  <circle cx="850" cy="230" r="210" fill="#0F766E" opacity="0.12"/>
+  <rect x="64" y="64" width="952" height="1222" rx="46" fill="#FFFFFF" stroke="#D8E2DF" stroke-width="3"/>
+  <circle cx="126" cy="132" r="36" fill="#07100F"/>
+  <text x="180" y="146" fill="#07100F" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="900">NEXA IA</text>
+  <text x="64" y="264" fill="#0F766E" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="900">MARKETING DIGITAL LOCAL</text>
+  <text x="64" y="390" fill="#07100F" font-family="Inter, Arial, sans-serif" font-size="88" font-weight="900">Publica</text>
+  <text x="64" y="486" fill="#07100F" font-family="Inter, Arial, sans-serif" font-size="88" font-weight="900">con ofertas</text>
+  <text x="64" y="582" fill="#07100F" font-family="Inter, Arial, sans-serif" font-size="88" font-weight="900">que venden</text>
+  <rect x="64" y="672" width="280" height="280" rx="30" fill="#07100F"/>
+  <rect x="400" y="672" width="280" height="280" rx="30" fill="#0F766E"/>
+  <rect x="736" y="672" width="280" height="280" rx="30" fill="#D7192D"/>
+  <text x="105" y="820" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="900">Flyers</text>
+  <text x="433" y="820" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="900">Mensajes</text>
+  <text x="780" y="820" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="900">Promos</text>
+  <text x="64" y="1060" fill="#34413E" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="700">Contenido, textos de venta y promociones para reactivar clientes.</text>
+  <text x="64" y="1166" fill="#07100F" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="900">Desde US$99/mes</text>
+  <text x="64" y="1230" fill="#0F766E" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="900">Ideal para negocios que ya venden por WhatsApp</text>
+</svg>

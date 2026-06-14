@@ -1,0 +1,21 @@
+<svg width="1080" height="1350" viewBox="0 0 1080 1350" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Flyer AinaWeb</title>
+  <desc id="desc">Promocion de pagina web oficial para negocios locales.</desc>
+  <rect width="1080" height="1350" fill="#F5F7F6"/>
+  <rect x="64" y="64" width="952" height="1222" rx="46" fill="#FFFFFF" stroke="#D8E2DF" stroke-width="3"/>
+  <circle cx="126" cy="132" r="36" fill="#07100F"/>
+  <text x="180" y="146" fill="#07100F" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="900">NEXA IA</text>
+  <text x="64" y="262" fill="#0F766E" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="900">AINAWEB</text>
+  <text x="64" y="378" fill="#07100F" font-family="Inter, Arial, sans-serif" font-size="86" font-weight="900">Tu pagina</text>
+  <text x="64" y="472" fill="#07100F" font-family="Inter, Arial, sans-serif" font-size="86" font-weight="900">oficial lista</text>
+  <text x="64" y="566" fill="#07100F" font-family="Inter, Arial, sans-serif" font-size="86" font-weight="900">para vender</text>
+  <rect x="64" y="650" width="952" height="290" rx="28" fill="#07100F"/>
+  <rect x="112" y="710" width="376" height="42" rx="12" fill="#0F766E"/>
+  <rect x="112" y="784" width="620" height="32" rx="10" fill="#C7D7D3"/>
+  <rect x="112" y="844" width="500" height="32" rx="10" fill="#C7D7D3"/>
+  <rect x="734" y="720" width="206" height="146" rx="22" fill="#D9FDD3"/>
+  <text x="760" y="807" fill="#07100F" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="900">WhatsApp</text>
+  <text x="64" y="1032" fill="#34413E" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="700">Servicios, precios, ubicacion, fotos y boton directo a WhatsApp.</text>
+  <text x="64" y="1138" fill="#07100F" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="900">Desde US$149</text>
+  <text x="64" y="1212" fill="#0F766E" font-family="Inter, Arial, sans-serif" font-size="36" font-weight="900">Entrega rapida para negocios sin web</text>
+</svg>

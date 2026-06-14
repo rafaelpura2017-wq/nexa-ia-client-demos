@@ -1,0 +1,18 @@
+<svg width="1200" height="1200" viewBox="0 0 1200 1200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">NEXA IA logo</title>
+  <desc id="desc">Premium logo for a software, chatbot and AI automation company.</desc>
+  <rect width="1200" height="1200" rx="96" fill="#07100F"/>
+  <circle cx="600" cy="458" r="256" stroke="#0F766E" stroke-width="28"/>
+  <path d="M390 634L334 700C325 711 330 728 344 731L442 751" stroke="#0F766E" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M447 603V317L598 603V317" stroke="#F7FAF9" stroke-width="42" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M599 604L754 318V604" stroke="#E6ECEA" stroke-width="42" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M756 396H846" stroke="#0F766E" stroke-width="24" stroke-linecap="round"/>
+  <path d="M756 492H884" stroke="#0F766E" stroke-width="24" stroke-linecap="round"/>
+  <path d="M756 588H824" stroke="#0F766E" stroke-width="24" stroke-linecap="round"/>
+  <circle cx="878" cy="396" r="24" fill="#07100F" stroke="#C7D7D3" stroke-width="16"/>
+  <circle cx="916" cy="492" r="24" fill="#07100F" stroke="#C7D7D3" stroke-width="16"/>
+  <circle cx="856" cy="588" r="24" fill="#07100F" stroke="#C7D7D3" stroke-width="16"/>
+  <path d="M376 313L331 279C322 272 326 258 338 257L472 247C484 246 491 261 482 269L384 357C376 365 362 357 366 346L376 313Z" fill="#D7192D"/>
+  <text x="600" y="850" text-anchor="middle" fill="#F7FAF9" font-family="Montserrat, Inter, Arial, sans-serif" font-size="120" font-weight="800" letter-spacing="10">NEXA IA</text>
+  <text x="600" y="930" text-anchor="middle" fill="#A7B8B4" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="600" letter-spacing="5">SOFTWARE PARA NEGOCIOS</text>
+</svg>

@@ -1,0 +1,19 @@
+<svg width="1080" height="1350" viewBox="0 0 1080 1350" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Flyer Optimizacion de sitio</title>
+  <desc id="desc">Promocion de optimizacion de sitio web.</desc>
+  <rect width="1080" height="1350" fill="#07100F"/>
+  <rect x="64" y="64" width="952" height="1222" rx="46" fill="#0C1817" stroke="#1B3531" stroke-width="3"/>
+  <circle cx="126" cy="132" r="36" fill="#0F766E"/>
+  <text x="180" y="146" fill="#F7FAF9" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="900">NEXA IA</text>
+  <text x="64" y="270" fill="#9FE7DF" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="900">OPTIMIZACION DE SITIO</text>
+  <text x="64" y="392" fill="#F7FAF9" font-family="Inter, Arial, sans-serif" font-size="86" font-weight="900">Tu pagina</text>
+  <text x="64" y="486" fill="#F7FAF9" font-family="Inter, Arial, sans-serif" font-size="86" font-weight="900">no esta</text>
+  <text x="64" y="580" fill="#F7FAF9" font-family="Inter, Arial, sans-serif" font-size="86" font-weight="900">vendiendo?</text>
+  <rect x="64" y="668" width="952" height="108" rx="26" fill="#D7192D"/>
+  <text x="100" y="736" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="900">La hacemos clara, rapida y lista para contactos</text>
+  <text x="64" y="882" fill="#C7D7D3" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="700">Revisamos textos, botones, estructura, velocidad visual y llamado a la accion.</text>
+  <text x="64" y="1030" fill="#F7FAF9" font-family="Inter, Arial, sans-serif" font-size="56" font-weight="900">Auditoria gratis</text>
+  <text x="64" y="1098" fill="#9FE7DF" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="900">Optimizacion desde US$79</text>
+  <rect x="64" y="1174" width="560" height="76" rx="18" fill="#0F766E"/>
+  <text x="100" y="1224" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="900">Envia tu pagina y la revisamos</text>
+</svg>

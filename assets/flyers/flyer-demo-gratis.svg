@@ -1,0 +1,19 @@
+<svg width="1080" height="1350" viewBox="0 0 1080 1350" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Flyer Demo Gratis</title>
+  <desc id="desc">Invitacion a pedir una demo gratis personalizada.</desc>
+  <rect width="1080" height="1350" fill="#F5F7F6"/>
+  <rect x="64" y="64" width="952" height="1222" rx="46" fill="#FFFFFF" stroke="#D8E2DF" stroke-width="3"/>
+  <circle cx="126" cy="132" r="36" fill="#07100F"/>
+  <text x="180" y="146" fill="#07100F" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="900">NEXA IA</text>
+  <text x="64" y="280" fill="#0F766E" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="900">ENTRADA PERFECTA PARA CONTACTAR</text>
+  <text x="64" y="408" fill="#07100F" font-family="Inter, Arial, sans-serif" font-size="88" font-weight="900">Te preparo</text>
+  <text x="64" y="504" fill="#07100F" font-family="Inter, Arial, sans-serif" font-size="88" font-weight="900">una demo</text>
+  <text x="64" y="600" fill="#07100F" font-family="Inter, Arial, sans-serif" font-size="88" font-weight="900">gratis</text>
+  <rect x="64" y="690" width="952" height="214" rx="30" fill="#07100F"/>
+  <text x="110" y="775" fill="#F7FAF9" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="900">Con el nombre de tu negocio</text>
+  <text x="110" y="840" fill="#C7D7D3" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700">Mira como responderia precios, horarios y citas.</text>
+  <text x="64" y="1018" fill="#34413E" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="700">Sin compromiso. Si te gusta, lo configuramos para tu negocio.</text>
+  <rect x="64" y="1140" width="430" height="82" rx="18" fill="#0F766E"/>
+  <text x="102" y="1194" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="900">Solicitar demo</text>
+  <text x="528" y="1194" fill="#07100F" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="900">Web, chatbot y marketing</text>
+</svg>

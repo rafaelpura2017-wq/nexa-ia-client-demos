@@ -1,0 +1,22 @@
+<svg width="1080" height="1350" viewBox="0 0 1080 1350" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Flyer Chatbot IA</title>
+  <desc id="desc">Promocion de chatbot IA para negocios locales.</desc>
+  <rect width="1080" height="1350" fill="#07100F"/>
+  <circle cx="860" cy="210" r="180" fill="#0F766E" opacity="0.18"/>
+  <circle cx="120" cy="1180" r="220" fill="#D7192D" opacity="0.12"/>
+  <rect x="64" y="64" width="952" height="1222" rx="46" stroke="#183330" stroke-width="3"/>
+  <circle cx="126" cy="132" r="36" fill="#0F766E"/>
+  <text x="180" y="146" fill="#F7FAF9" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="900">NEXA IA</text>
+  <text x="64" y="278" fill="#9FE7DF" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="900">CHATBOT IA PARA NEGOCIOS</text>
+  <text x="64" y="405" fill="#F7FAF9" font-family="Inter, Arial, sans-serif" font-size="96" font-weight="900">Responde</text>
+  <text x="64" y="505" fill="#F7FAF9" font-family="Inter, Arial, sans-serif" font-size="96" font-weight="900">clientes 24/7</text>
+  <rect x="64" y="590" width="640" height="86" rx="18" fill="#D9FDD3"/>
+  <text x="96" y="644" fill="#07100F" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800">Precios, horarios y citas</text>
+  <rect x="220" y="704" width="720" height="92" rx="18" fill="#12302D"/>
+  <text x="252" y="762" fill="#DDEBE8" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800">Tu negocio nunca deja al cliente esperando</text>
+  <text x="64" y="895" fill="#C7D7D3" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="700">Ideal para barberias, clinicas, restaurantes y gimnasios.</text>
+  <text x="64" y="1010" fill="#F7FAF9" font-family="Inter, Arial, sans-serif" font-size="54" font-weight="900">Desde US$99</text>
+  <text x="64" y="1074" fill="#9FE7DF" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="800">+ mantenimiento desde US$29/mes</text>
+  <rect x="64" y="1160" width="500" height="82" rx="18" fill="#0F766E"/>
+  <text x="100" y="1214" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="900">Pide tu demo gratis</text>
+</svg>
